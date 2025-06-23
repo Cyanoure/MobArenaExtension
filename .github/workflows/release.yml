@@ -30,7 +30,7 @@ jobs:
           jar=".jar"
           ls . | grep '.jar' | grep -v '^original' | sed 's/\.[^.]*$//' | xargs -I '{}' cp -v '{}'"$jar" '../build/''{}'"$jar"
       - name: Store artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: release
           path: build
